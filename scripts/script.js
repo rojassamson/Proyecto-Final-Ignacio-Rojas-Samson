@@ -9,11 +9,11 @@ const productoPrecioBruto = new Map ([
     ["Paté", 700]
 ]);
 const carritoCompras = new Map();
-var cantidadProductos = 0;
-var totalNeto = 0
-var totalBruto = 0;
-var iva = 0;
-var listaProductos = 
+cantidadProductos = 0;
+totalNeto = 0
+totalBruto = 0;
+iva = 0;
+listaProductos = 
 `
 Leche:      $1000
 Mantequilla:$1400
@@ -35,17 +35,23 @@ function llenarCarrito(producto, cantidad) {
         let valida = false;
 
         while(valida == false) {
-            var producto1 = prompt(listaProductos + "\n¿Que desea llevar? (Escriba el nombre del producto tal cómo aparece en el listado.)");
-            if (producto1 !== null) {
+            producto1 = prompt(listaProductos + "\n¿Que desea llevar? (Escriba el nombre del producto tal cómo aparece en el listado.)");
+            validaProducto = parseFloat(producto1);
+            if(isNaN(validaProducto) && productoPrecioBruto.has(producto1)) {
                 valida = true;
+            } else {
+                alert("Ingrese el nombre del producto que desea llevar, tal como aparece en el listado. Presione 'Aceptar' para mostrar el listado.");
             }
         }
 
         valida = false;
         while(valida == false){
-            var cantidad1 = parseInt(prompt("¿Cuántas unidades desea llevar?"));
-            if (cantidad1 !== null){
+            cantidad1 = parseInt(prompt("¿Cuántas unidades desea llevar?"));
+            validaCantidad = parseFloat(cantidad1);
+            if(!isNaN(validaCantidad)) {
                 valida = true;
+            } else {
+                alert("Ingrese un número válido. Presione 'Aceptar para ingresarlo nuevamente.");
             }
         }
         
@@ -77,18 +83,23 @@ function loop() {
         let valida = false;
 
         while(valida == false) {
-            var producto = prompt(listaProductos + "\n¿Que desea llevar? (Ingrese el número que corresponda)");
-            if (producto !== null) {
+            producto = prompt(listaProductos + "\n¿Que desea llevar? (Escriba el nombre del producto tal cómo aparece en el listado.)");
+            validaProducto = parseFloat(producto);
+            if(isNaN(validaProducto) && productoPrecioBruto.has(producto)) {
                 valida = true;
+            } else {
+                alert("Ingrese el nombre del producto que desea llevar, tal como aparece en el listado. Presione 'Aceptar' para mostrar el listado.");
             }
         }
 
         valida = false;
         while(valida == false){
-            var cantidad = parseInt(prompt("¿Cuántas unidades desea llevar?"));
-            console.log(cantidad);
-            if (cantidad !== null){
+            cantidad = parseInt(prompt("¿Cuántas unidades desea llevar?"));
+            validaCantidad = parseFloat(cantidad);
+            if(!isNaN(validaCantidad)) {
                 valida = true;
+            } else {
+                alert("Ingrese un número válido. Presione 'Aceptar para ingresarlo nuevamente.");
             }
         }
 
