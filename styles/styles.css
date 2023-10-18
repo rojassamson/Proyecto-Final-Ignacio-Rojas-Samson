@@ -43,3 +43,7 @@ li {
 #pedidoConfirmado {
     display: none;
 }
+
+#recargarPagina {
+    display: none;
+}

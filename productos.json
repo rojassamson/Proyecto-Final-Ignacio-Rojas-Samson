@@ -1,0 +1,34 @@
+[
+    {
+        "nombre": "Leche",
+        "precio": 1000
+    },
+    {
+        "nombre": "Mantequilla",
+        "precio": 1400
+    },
+    {
+        "nombre": "Jamón",
+        "precio": 2100
+    },
+    {
+        "nombre": "Galletas",
+        "precio": 900
+    },
+    {
+        "nombre": "Bebida",
+        "precio": 1200
+    },
+    {
+        "nombre": "Jugo",
+        "precio": 1000
+    },
+    {
+        "nombre": "Mermelada",
+        "precio": 800
+    },
+    {
+        "nombre": "Paté",
+        "precio": 700
+    }
+]

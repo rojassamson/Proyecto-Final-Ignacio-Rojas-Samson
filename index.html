@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <title>Tercera Preentrega Ignacio Rojas Samson</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Proyecto Final Ignacio Rojas Samson</title>
 </head>
 <body>
     <div class="container">
         <h1>Bienvenido al Minimarket de Conejo</h1>
         <p>Presione el botón para ver los productos:</p>
         <button id="verProductos">Ver Productos</button>
+    </div>
 
-        <div id="productosLista">
-            <h2>Productos disponibles:</h2>
-            <ul id="listaProductos">
-                <!-- Aquí se agregarán los productos dinámicamente -->
-            </ul>
-        </div>
+    <div class="container" id="productosLista">
+        <h2>Productos disponibles:</h2>
+        <ul id="listaProductos">
+            <!-- Aquí se agregarán los productos dinámicamente -->
+        </ul>
+    </div>
+
+    <div class="container" id="carrito">
+        <h2>Carrito de Compras:</h2>
+        <ul id="carritoLista">
+            <!-- Aquí se agregarán los elementos del carrito dinámicamente -->
+        </ul>
+        <p>Total Bruto: $<span id="totalBruto">0</span></p>
+        <button id="confirmarPedido">Confirmar Pedido</button>
     </div>
 
     <div class="container" id="carritosGuardados">
@@ -28,22 +37,17 @@
         <button id="cargarCarrito">Cargar Carrito Seleccionado</button>
     </div>
 
-    <div class="container" id="carrito">
-        <h2>Carrito de Compras:</h2>
-        <ul id="carritoLista">
-            <!-- Aquí se agregarán los elementos del carrito dinámicamente -->
-        </ul>
-        <button id="confirmarPedido">Confirmar Pedido</button>
-    </div>
-
     <div class="container" id="pedidoConfirmado">
         <h2>Pedido Confirmado:</h2>
-        <p>Total Bruto: <span id="totalBrutoConfirmado"></span></p>
-        <p>IVA (19%): <span id="ivaConfirmado"></span></p>
-        <p>Total Neto: <span id="totalNetoConfirmado"></span></p>
+        <p>Total Bruto: $<span id="totalBrutoConfirmado"></span></p>
+        <p>IVA (19%): $<span id="ivaConfirmado"></span></p>
+        <p>Total Neto: $<span id="totalNetoConfirmado"></span></p>
         <button id="realizarOtraCompra">Realizar Otra Compra</button>
     </div>
 
-    <script src="./scripts/script.js"></script>
+    <button id="recargarPagina"">Recargar Página</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
